@@ -13,9 +13,9 @@ favorite_list = [
     "湖南卫视",
     "翡翠台",
 ]
-open_online_search = False
+open_online_search = True
 favorite_page_num = 5
-default_page_num = 3
+default_page_num = 5
 urls_limit = 15
 open_sort = True
 response_time_weight = 0.5
