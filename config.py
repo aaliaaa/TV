@@ -29,8 +29,7 @@ subscribe_urls = [
     "https://m3u.ibert.me/txt/fmml_dv6.txt",
     "https://m3u.ibert.me/txt/o_cn.txt",
     "https://m3u.ibert.me/txt/j_iptv.txt",
-    "https://github.com/YueChan/Live/blob/main/IPTV.txt",
-    "https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/ipv6.m3u"
+       
 ]
 open_multicast = True
 region_list = ["all"]
