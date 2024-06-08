@@ -26,5 +26,5 @@ subscribe_urls = [
     "https://raw.githubusercontent.com/yuanzl77/IPTV/main/直播/ipv6.txt",
     "https://fanmingming.com/txt?url=https://live.fanmingming.com/tv/m3u/ipv6.m3u",
    ]
-open_multicast = True
-region_list = ["all"]
+open_multicast = False
+region_list = ["广东"]
