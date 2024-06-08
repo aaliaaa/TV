@@ -151,5 +151,4 @@ class UpdateSource:
         updateFile(user_log_file, "result_new.log")
         print(f"Update completed! Please check the {user_final_file} file!")
 
-
-   UpdateSource().main()
+UpdateSource().main()
