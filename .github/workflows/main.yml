@@ -1,11 +1,11 @@
-name: 'update schedule'
+name: 'new daily schedule'
 
 on:
   schedule:
     - cron: '0 0 1 1 *'
   workflow_dispatch:
     branches:
-      - 'Develop'
+      - Develop
             
 jobs:
   push:
