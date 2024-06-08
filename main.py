@@ -152,4 +152,4 @@ class UpdateSource:
         print(f"Update completed! Please check the {user_final_file} file!")
 
 
-# UpdateSource().main()
+ UpdateSource().main()
