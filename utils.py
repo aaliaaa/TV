@@ -28,7 +28,7 @@ def formatChannelName(name):
     Format the channel name with sub and replace and lower
     """
     sub_pattern = (
-        r"-|_|\((.*?)\)|\[(.*?)\]| |频道|标清|高清|HD|hd|超清|超高|超高清|中央|央视|台"
+        r"-|_|\((.*?)\)|\[(.*?)\]| |频道|标清|高清|HD|hd|超清|超高|超高清|中央|央视|台|\*|\"|name|\:|chc|CHC"
     )
     name = re.sub(sub_pattern, "", name)
     name = name.replace("plus", "+")
@@ -62,6 +62,12 @@ def formatChannelName(name):
     name = name.replace("CCTV16奥林匹克", "CCTV16")
     name = name.replace("CCTV17农业农村", "CCTV17")
     name = name.replace("CCTV17农业", "CCTV17")
+    name = name.replace("CCTV0", "CCTV")
+    name = name.replace("CCTV第一剧场", "第一剧场")
+    name = name.replace("CCTV怀旧剧场", "怀旧剧场")
+    name = name.replace("CCTV风云剧场", "风云剧场")
+    name = name.replace("CCTV风云足球", "风云足球")
+    name = name.replace("CCTV咪咕", "CCTV")
     return name.lower()
 
 
@@ -505,7 +511,10 @@ def getChannelsByFOFA(source):
                                 item_name = formatChannelName(item.get("name"))
                                 item_url = item.get("url").strip()
                                 if item_name and item_url:
-                                    total_url = url + item_url
+                                    if "://" in item_url:
+                                        total_url=item_url
+                                    else:
+                                        total_url = url + item_url
                                     if item_name not in channels:
                                         channels[item_name] = [total_url]
                                     else:
